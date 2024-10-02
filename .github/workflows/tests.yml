@@ -29,7 +29,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run test
+    - run: npx playwright test
     - run: npx flakiness upload-playwright-json ./test-results.json
       if: ${{ !cancelled() }}
       shell: bash
