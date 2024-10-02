@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@flakiness/report": "0.0.1",
+    "@flakiness/report": "^0.0.1",
     "@playwright/test": "^1.47.2"
   }
 }
