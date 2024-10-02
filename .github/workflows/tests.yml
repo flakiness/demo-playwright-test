@@ -30,7 +30,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npx playwright test
-    - run: npx flakiness upload-playwright-json ./test-results.json
+    - run: npx flakiness upload-playwright-json --endpoint 'https://dev.flakiness.io' ./test-results.json
       if: ${{ !cancelled() }}
       shell: bash
 
