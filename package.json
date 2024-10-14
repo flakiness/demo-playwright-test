@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": { },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@flakiness/report": "^0.0.1",
+    "@flakiness/report": "^0.0.2",
     "@playwright/test": "^1.47.2"
   }
 }

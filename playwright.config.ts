@@ -3,7 +3,7 @@ import { defineConfig } from '@playwright/test';
 export default defineConfig({
   reporter: [
     ['list'],
-    ['json', {  outputFile: 'test-results.json' }],
+    ['@flakiness/report/playwright-test'],
   ],
   retries: 1,
 });
