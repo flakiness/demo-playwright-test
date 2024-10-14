@@ -11,6 +11,8 @@ on:
 env:
   # Force terminal colors. @see https://www.npmjs.com/package/colors
   FORCE_COLOR: 1
+  FLAKINESS_ACCESS_TOKEN: ${{ secrets.FLAKINESS_ACCESS_TOKEN }}
+  FLAKINESS_ENDPOINT: "https://dev.flakiness.io"
 
 jobs:
   test_linux:
@@ -28,11 +30,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npx playwright test
-    - run: npx flakiness upload-playwright-json ./test-results.json
-      if: ${{ !cancelled() }}
-      shell: bash
-      env:
-        FLAKINESS_ACCESS_TOKEN: ${{ secrets.FLAKINESS_ACCESS_TOKEN }}
-        FLAKINESS_ENDPOINT: "https://dev.flakiness.io"
 
 
