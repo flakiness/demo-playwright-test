@@ -43,13 +43,13 @@ test('flaky test', {
 });
 
 test('trace', async ({ page }) => {
-  await page.goto('https://dev.flakiness.io/docs');
+  await page.goto('https://flakiness.io/docs');
   await expect.soft(page).toHaveScreenshot();
   await expect.soft(page).toHaveScreenshot();
 });
 
 test.skip('trace-skipped', async ({ page }) => {
-  await page.goto('https://dev.flakiness.io/docs');
+  await page.goto('https://flakiness.io/docs');
   await expect.soft(page).toHaveScreenshot();
   await expect.soft(page).toHaveScreenshot();
 });
